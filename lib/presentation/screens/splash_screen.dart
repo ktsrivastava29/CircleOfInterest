@@ -12,9 +12,22 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () {
-      context.go('/login');
-    });
+    _redirect();
+  }
+
+  Future<void> _redirect() async {
+    await Future.delayed(const Duration(seconds: 2));
+
+    // TODO: Replace with actual Supabase auth check
+    const bool isLoggedIn = false; // Placeholder
+
+    if (mounted) {
+      if (isLoggedIn) {
+        context.go('/home');
+      } else {
+        context.go('/login');
+      }
+    }
   }
 
   @override
@@ -22,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Image.asset(
-          'assets/images/logo-no-bg.png',
+          'assets/images/logo.png',
           height: 120,
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'presentation/screens/home_screen.dart';
-
+import 'config/routes/app_router.dart';
 void main() {
   runApp(const CircleOfInterest());
 }
@@ -10,13 +9,13 @@ class CircleOfInterest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'CircleOfInterest',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const HomeScreen(),
+      routerConfig: AppRouter.router,
     );
   }
 }

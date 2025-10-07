@@ -8,12 +8,12 @@ class UserInfoFormWidget extends StatelessWidget {
   final bool isEditing;
 
   const UserInfoFormWidget({
-    Key? key,
+    super.key,
     required this.formKey,
     required this.nameController,
     required this.emailController,
     required this.isEditing,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

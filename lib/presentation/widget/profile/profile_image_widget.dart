@@ -6,8 +6,7 @@ class ProfileImageWidget extends StatelessWidget {
   final bool isEditing;
   final VoidCallback? onImageTap;
 
-  const ProfileImageWidget({Key? key, required this.imageUrl, required this.isEditing, this.onImageTap})
-    : super(key: key);
+  const ProfileImageWidget({super.key, required this.imageUrl, required this.isEditing, this.onImageTap});
 
   @override
   Widget build(BuildContext context) {

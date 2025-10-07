@@ -5,9 +5,19 @@ class EventDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).textTheme.bodyMedium?.color;
+
     return Scaffold(
-      appBar: AppBar(title: const Text("Event Details"), centerTitle: true),
-      body: const Center(child: Text("Event Details Screen")),
+      appBar: AppBar(
+        title: const Text("Event Details"),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Text(
+          "Event Details Screen",
+          style: TextStyle(fontSize: 20, color: textColor),
+        ),
+      ),
     );
   }
 }

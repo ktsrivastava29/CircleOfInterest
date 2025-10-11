@@ -6,7 +6,7 @@ class PastEventsWidget extends StatelessWidget {
   final List<String> pastEvents;
   final Function(int) onEventTap;
 
-  const PastEventsWidget({Key? key, required this.pastEvents, required this.onEventTap}) : super(key: key);
+  const PastEventsWidget({super.key, required this.pastEvents, required this.onEventTap});
 
   @override
   Widget build(BuildContext context) {

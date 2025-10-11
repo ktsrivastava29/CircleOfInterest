@@ -5,9 +5,16 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).textTheme.bodyMedium?.color;
+
     return Scaffold(
       appBar: AppBar(title: const Text("Chat"), centerTitle: true),
-      body: const Center(child: Text("Chat Screen")),
+      body: Center(
+        child: Text(
+          "Chat Screen",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: textColor),
+        ),
+      ),
     );
   }
 }
